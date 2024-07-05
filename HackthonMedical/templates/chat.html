@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackalife Medical Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.jpg') }}.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+  
+        </div>
+        <form id="chat-form" enctype="multipart/form-data">
+            <input type="text" id="chat-input" placeholder="Type a message or question..." autocomplete="off">
+            <div class="attachment-container">
+                <button type="button" class="attachment-button" id="attachment-button">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+                <div class="attachment-dropdown" id="attachment-dropdown">
+                    <button type="button" id="upload-button">
+                        <i class="fas fa-upload"></i> Upload from computer
+                    </button>
+                    <input type="file" id="image-input" accept="image/*" style="display: none;">
+                </div>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

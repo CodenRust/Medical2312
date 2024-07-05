@@ -1,0 +1,239 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    background-color: #1e1e1e;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #333;
+}
+
+.chat-message {
+    margin-bottom: 20px;
+    padding: 12px;
+    background-color: #333;
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    padding: 16px;
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+    margin: 0;
+    align-items: center;
+    gap: 12px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #333;
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+.attachment-container {
+    position: relative;
+}
+
+.attachment-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.attachment-dropdown {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.attachment-dropdown button {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    text-align: left;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+}
+
+strong {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.chat-message ul, .chat-message ol {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-message li {
+    margin-bottom: 5px;
+}
+
+.chat-message p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-message div, .chat-message span {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.chat-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+/* Thinking animation */
+/* Thinking animation */
+.thinking-animation {
+    display: inline-block;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    background-color: #333;
+    border-radius: 50%;
+    animation: dot-blink 1.4s infinite both;
+}
+
+.dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes dot-blink {
+    0%, 80%, 100% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .chat-box {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .chat-message {
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    form {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    input[type="text"], .attachment-dropdown button {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-box {
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .chat-message {
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    form {
+        padding: 8px;
+        gap: 6px;
+    }
+
+    input[type="text"], .attachment-dropdown button {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+}
